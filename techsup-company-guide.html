@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsup Track - Company User Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #1a3a52;
+            --secondary: #00A8E8;
+            --accent: #FFA500;
+            --light-bg: #f8f9fa;
+            --border-light: #e9ecef;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: var(--primary) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .navbar-brand i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #2a5073 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .badge-primary {
+            background-color: var(--secondary) !important;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-nav {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .nav-section {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .nav-section-title {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nav-links li:last-child {
+            border-bottom: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background-color: #e9ecef;
+            border-left-color: var(--secondary);
+            color: var(--secondary);
+            padding-left: calc(1rem + 4px);
+        }
+
+        .nav-links a.active {
+            background-color: rgba(0, 168, 232, 0.1);
+            border-left-color: var(--secondary);
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .content-section {
+            scroll-margin-top: 100px;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .content-section h2 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-section h2 i {
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .step-container {
+            margin-top: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--secondary);
+        }
+
+        .step-number {
+            background-color: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            margin: 0.5rem 0 0 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background-color: rgba(0, 168, 232, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--secondary);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #333;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tip-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #00A8E8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .tip-box i {
+            color: #00A8E8;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .warning-box i {
+            color: #ff9800;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .table-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .table-card table {
+            margin: 0;
+        }
+
+        .table-card th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            border: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(0, 168, 232, 0.1) !important;
+            color: var(--primary) !important;
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(0, 168, 232, 0.25) !important;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .badge-info {
+            background-color: rgba(0, 168, 232, 0.2);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+
+        .card-feature {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-feature:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--secondary);
+        }
+
+        .card-feature h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-feature p {
+            color: #666;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .sidebar-nav {
+                position: static;
+                margin-bottom: 2rem;
+            }
+
+            .nav-section {
+                margin-bottom: 1rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .step-number {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#top">
+                <i class="bi bi-building"></i>Techsup Track
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#getting-started">Getting Started</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#setup">Company Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#employee-management">Employee Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container-lg">
+            <span class="badge-primary"><i class="bi bi-briefcase"></i> Company Admin Guide</span>
+            <h1>Manage Your Workforce Efficiently</h1>
+            <p>Complete guide to setting up and managing your company on Techsup Track. Learn how to onboard employees, monitor attendance, generate reports, and ensure compliance with Saudi labor regulations.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-lg">
+        <div class="row g-4">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3">
+                <div class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-section-title">Getting Started</div>
+                        <ul class="nav-links">
+                            <li><a href="#getting-started">Overview</a></li>
+                            <li><a href="#registration">Company Registration</a></li>
+                            <li><a href="#login">Login & Dashboard</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Company Setup</div>
+                        <ul class="nav-links">
+                            <li><a href="#company-profile">Company Profile</a></li>
+                            <li><a href="#org-structure">Organization Structure</a></li>
+                            <li><a href="#roles-permissions">Roles & Permissions</a></li>
+                            <li><a href="#work-locations">Work Locations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Employee Management</div>
+                        <ul class="nav-links">
+                            <li><a href="#invite-employees">Invite Employees</a></li>
+                            <li><a href="#manage-employees">Manage Employees</a></li>
+                            <li><a href="#employee-profiles">Employee Profiles</a></li>
+                            <li><a href="#work-schedules">Work Schedules</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Monitoring & Reporting</div>
+                        <ul class="nav-links">
+                            <li><a href="#attendance-monitoring">Attendance Monitoring</a></li>
+                            <li><a href="#reports">View Reports</a></li>
+                            <li><a href="#export-data">Export Data</a></li>
+                            <li><a href="#performance-analytics">Analytics</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Communication</div>
+                        <ul class="nav-links">
+                            <li><a href="#messaging">Messaging System</a></li>
+                            <li><a href="#announcements">Announcements</a></li>
+                            <li><a href="#notifications">Notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Compliance</div>
+                        <ul class="nav-links">
+                            <li><a href="#labor-compliance">Labor Compliance</a></li>
+                            <li><a href="#data-security">Data Security</a></li>
+                            <li><a href="#regulatory">Regulatory Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <!-- Getting Started Section -->
+                <section id="getting-started" class="content-section">
+                    <h2><i class="bi bi-rocket"></i> Getting Started with Techsup Track</h2>
+                    <p>Welcome to Techsup Track's Company Administration Portal! This comprehensive guide will help you maximize the platform to manage your workforce, monitor attendance, and ensure compliance with Saudi labor regulations.</p>
+                    
+                    <div class="highlight-box">
+                        <strong><i class="bi bi-info-circle"></i> What is Techsup Track for Companies?</strong>
+                        <p style="margin-top: 0.5rem; margin-bottom: 0;">Techsup Track is an enterprise attendance tracking and workforce management platform certified by the Saudi Ministry of Human Resources. It enables you to manage flexible work arrangements, monitor employee attendance in real-time, generate compliance reports, and maintain effective communication with your team.</p>
+                    </div>
+
+                    <h4 style="margin-top: 2rem; color: var(--primary); font-weight: 600;">Key Features for Your Business</h4>
+                    <ul class="feature-list">
+                        <li>Custom control panel for independent company management</li>
+                        <li>Organization structure setup (departments, teams, hierarchies)</li>
+                        <li>Role-based access control and permissions management</li>
+                        <li>Real-time employee attendance and GPS tracking</li>
+                        <li>Comprehensive daily, weekly, and monthly reporting</li>
+                        <li>Data filtering by project, employee, or task</li>
+                        <li>Internal messaging system for team communication</li>
+                        <li>Document and file sharing capabilities</li>
+                        <li>Full compliance with Saudi remote work regulations</li>
+                        <li>Integration with HR and payroll systems</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <i class="bi bi-exclamation-triangle"></i> <strong>Important:</strong> As a company administrator, you have significant responsibilities. Ensure you understand Saudi labor law requirements and this platform's compliance features.
+                    </div>
+                </section>
+
+                <!-- Company Registration -->
+                <section id="registration" class="content-section">
+                    <h2><i class="bi bi-person-badge"></i> Company Registration Process</h2>
+                    <p>Follow these steps to set up your company account on Techsup Track.</p>
+
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Visit the Registration Page</h4>
+                                <p>Go to Techsup Track and click <strong>"Company Registration"</strong> or <strong>"Create your account"</strong> under the Company Login section.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Enter Company Information</h4>
+                                <p>Provide your company's official legal name, registration number, tax ID, and industry classification.</p>
+                                <div class="tip-box">
+                                    <i class="bi bi-lightbulb"></i> Use your Chamber of Commerce registration number
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Register Admin Account</h4>
+                                <p>Create the primary administrator account with email and strong password. This person will have full access to company settings.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Add Company Details</h4>
+                                <p>Enter company address, phone number, website, and primary contact person details.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Upload Required Documents</h4>
+                                <p>Provide certified copies of:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Chamber of Commerce certificate</li>
+                                    <li>Tax registration certificate</li>
+                                    <li>Company authorization letter</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Accept Terms & Conditions</h4>
+                                <p>Review and accept the Service Agreement. This includes compliance with Saudi labor regulations and Techsup Track policies.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h4>Verification & Activation</h4>
+                                <p>Your company will be verified by Techsup Support within 24-48 hours. You'll receive an activation email when your account is ready.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Login & Dashboard -->
+                <section id="login" class="content-section">
+                    <h2><i class="bi bi-box-arrow-in-right"></i> Login & Dashboard Overview</h2>
+                    
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Accessing Your Admin Dashboard</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Login Page</h4>
+                                <p>Visit techsuptrack.com and click <strong>"Company Login"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Enter Your Credentials</h4>
+                                <p>Input the administrator email and password you created during registration</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Two-Factor Authentication</h4>
+                                <p>If enabled, enter the verification code sent to your registered email or phone</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Access Your Dashboard</h4>
+                                <p>You're now in the Company Admin Portal. This is your control center.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Main Dashboard Components</h4>
+                    
+                    <div class="card-feature">
+                        <h4><i class="bi bi-speedometer2"></i> Overview Widget</h4>
+                        <p>Quick snapshot of company metrics: total employees, active users today, check-ins/check-outs, and any alerts or pending actions</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-person-check"></i> Live Attendance</h4>
+                        <p>Real-time view of who's checked in, who's on break, who's checked out, and who's absent today</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-graph-up"></i> Performance Metrics</h4>
+                        <p>Charts showing attendance rates, punctuality, average working hours, and trends</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-bell"></i> Alerts & Notifications</h4>
+                        <p>System alerts about attendance issues, new employee requests, maintenance, and policy updates</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-chat-dots"></i> Messages</h4>
+                        <p>Communication inbox for employee inquiries, leave requests, and administrative messages</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-gear"></i> Quick Actions</h4>
+                        <p>Shortcuts to common tasks: invite employees, view reports, manage organization structure, adjust settings</p>
+                    </div>
+                </section>
+
+                <!-- Company Profile Section -->
+                <section id="company-profile" class="content-section">
+                    <h2><i class="bi bi-building"></i> Setting Up Your Company Profile</h2>
+                    <p>Configure your company's basic information and branding on the platform.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Company Profile Information</h4>
+
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Settings</h4>
+                                <p>Click the settings icon or <strong>"Company Settings"</strong> from the main menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Company Information</h4>
+                                <p>Update company details:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Legal company name</li>
+                                    <li>Commercial registration number</li>
+                                    <li>Tax identification number</li>
+                                    <li>Industry classification</li>
+                                    <li>Number of employees</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Contact Information</h4>
+                                <p>Add headquarters address, phone number, email, and website</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Branding</h4>
+                                <p>Upload company logo, choose brand colors, and set company timezone</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Legal & Compliance</h4>
+                                <p>Upload required government documents and certificates</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Save Changes</h4>
+                                <p>Click <strong>"Save"</strong> to apply all updates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Company Logo:</strong> Upload a high-quality PNG or JPG (minimum 300x300px). This will appear in employee applications and reports.
+                    </div>
+                </section>
+
+                <!-- Organization Structure -->
+                <section id="org-structure" class="content-section">
+                    <h2><i class="bi bi-diagram-3"></i> Setting Up Organization Structure</h2>
+                    <p>Define your company's hierarchy by creating departments, teams, and reporting relationships.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Creating Departments</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Organization</h4>
+                                <p>Go to <strong>"Organization"</strong> or <strong>"Structure"</strong> from the main menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Create Department</h4>
+                                <p>Click <strong>"Add Department"</strong> and enter the department name (e.g., "Sales," "IT," "HR")</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Add Description</h4>
+                                <p>Optionally add a description of the department's responsibilities</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Assign Manager</h4>
+                                <p>Select a department manager (must be an existing user with manager role)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Save Department</h4>
+                                <p>Click <strong>"Create"</strong> to save the new department</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Organizational Chart</h4>
+                    <div class="highlight-box">
+                        After setting up departments and assigning managers, you can view the complete organizational chart. This shows the hierarchy and reporting structure at a glance.
+                    </div>
+                </section>
+
+                <!-- Roles & Permissions -->
+                <section id="roles-permissions" class="content-section">
+                    <h2><i class="bi bi-shield-check"></i> Roles & Permissions Management</h2>
+                    <p>Control who can access what features by setting up roles and assigning permissions.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Default Roles</h4>
+
+                    <div class="table-card">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Description</th>
+                                    <th>Permissions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Company Admin</strong></td>
+                                    <td>Full system access</td>
+                                    <td>All features, settings, user management, reports</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Department Manager</strong></td>
+                                    <td>Department-level control</td>
+                                    <td>View department employees, attendance, reports; manage leaves</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Team Lead</strong></td>
+                                    <td>Team supervision</td>
+                                    <td>View team members, attendance, basic reports</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HR Manager</strong></td>
+                                    <td>Human resources access</td>
+                                    <td>Employee management, leaves, payroll data, compliance reports</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Employee</strong></td>
+                                    <td>Standard employee access</td>
+                                    <td>Check in/out, view own attendance, see messages</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Viewer</strong></td>
+                                    <td>Read-only access</td>
+                                    <td>View reports and data only, no editing capabilities</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Assigning Roles</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to User Management</h4>
+                                <p>Navigate to <strong>"Users"</strong> or <strong>"Team"</strong> from the menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Select Employee</h4>
+                                <p>Find and click on the employee whose role you want to modify</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Change Role</h4>
+                                <p>Click <strong>"Edit"</strong> and select the new role from the dropdown</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Set Department (if applicable)</h4>
+                                <p>If assigning a manager role, select which department they'll manage</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Save Changes</h4>
+                                <p>Click <strong>"Save"</strong> and the employee's access will update immediately</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <i class="bi bi-exclamation-triangle"></i> <strong>Security Note:</strong> Always follow the principle of least privilege—give users only the access they need for their role.
+                    </div>
+                </section>
+
+                <!-- Work Locations -->
+                <section id="work-locations" class="content-section">
+                    <h2><i class="bi bi-geo-alt"></i> Configuring Work Locations</h2>
+                    <p>Set up the physical locations or coordinates where employees can check in. This is critical for GPS-based attendance verification.</p>
+
+                    <div class="highlight-box">
+                        <strong>Why Work Locations Matter:</strong> Techsup Track uses GPS verification to ensure employees are checking in from authorized work locations. This prevents fraudulent attendance records and ensures compliance.
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Adding a Work Location</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Locations</h4>
+                                <p>Go to <strong>"Settings"</strong> → <strong>"Work Locations"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click Add Location</h4>
+                                <p>Click <strong>"Add New Location"</strong> button</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Enter Location Details</h4>
+                                <p>Provide:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Location name (e.g., "Headquarters Riyadh")</li>
+                                    <li>Street address</li>
+                                    <li>City and postal code</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Set GPS Coordinates</h4>
+                                <p>Use the map or enter exact latitude/longitude. You can also set a geofence radius (typically 100-200 meters) for flexibility.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Assign to Department</h4>
+                                <p>Select which departments use this location</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Save Location</h4>
+                                <p>Click <strong>"Create Location"</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-lightbulb"></i> <strong>Remote Work:</strong> If you have remote employees, create a "Remote Work" location with a larger geofence radius or disable GPS verification for approved remote workers.
+                    </div>
+                </section>
+
+                <!-- Invite Employees -->
+                <section id="invite-employees" class="content-section">
+                    <h2><i class="bi bi-person-plus"></i> Inviting Employees to the Platform</h2>
+                    <p>Onboard your team members by sending them invitations to join Techsup Track.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Single Employee Invitation</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Employee Management</h4>
+                                <p>Navigate to <strong>"Employees"</strong> or <strong>"Team Members"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click Invite Employee</h4>
+                                <p>Click <strong>"Add Employee"</strong> or <strong>"Invite New Member"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Enter Employee Information</h4>
+                                <p>Provide:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Full name</li>
+                                    <li>Email address</li>
+                                    <li>Phone number</li>
+                                    <li>National ID</li>
+                                    <li>Department</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Set Employment Details</h4>
+                                <p>Select employment type (full-time, part-time, contract), start date, and work schedule</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Assign Role</h4>
+                                <p>Choose the employee's role (usually "Employee" for standard staff)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Send Invitation</h4>
+                                <p>Click <strong>"Send Invitation"</strong>. The employee will receive an email with a link to activate their account</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Bulk Employee Import</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Import</h4>
+                                <p>In Employee Management, look for <strong>"Bulk Import"</strong> or <strong>"Import Employees"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Download Template</h4>
+                                <p>Click <strong>"Download Excel Template"</strong> to get the properly formatted spreadsheet</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Fill in Employee Data</h4>
+                                <p>Enter all required information for each employee (name, email, phone, ID, department, etc.)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Upload File</h4>
+                                <p>Return to the import section and upload your completed Excel file</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Review & Confirm</h4>
+                                <p>Review the preview of imported employees and confirm the import</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Send Invitations</h4>
+                                <p>All employees will receive invitation emails automatically</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Import Template Columns:</strong> Name, Email, Phone, National ID, Department, Job Title, Employment Type, Start Date, Manager, Work Location
+                    </div>
+                </section>
+
+                <!-- Manage Employees -->
+                <section id="manage-employees" class="content-section">
+                    <h2><i class="bi bi-person-gear"></i> Managing Your Employees</h2>
+                    <p>Update employee information, adjust schedules, and manage their access to the platform.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Employee Actions</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>View Employee List</h4>
+                                <p>Go to <strong>"Employees"</strong> to see all team members with their status</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click on Employee</h4>
+                                <p>Click an employee's name to open their full profile</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Edit Information</h4>
+                                <p>Update phone number, emergency contact, bank details, or other information</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Manage Schedule</h4>
+                                <p>Adjust work schedule, set working hours, or assign different work patterns</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Save Changes</h4>
+                                <p>Click <strong>"Save"</strong> and changes take effect immediately</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Employee Actions Menu</h4>
+                    <div class="card-feature">
+                        <h4>Deactivate Account</h4>
+                        <p>Temporarily disable an employee's access while keeping their data intact (useful for leave periods)</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Remove Employee</h4>
+                        <p>Permanently remove an employee (only use for departures; their records are archived)</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Resend Invitation</h4>
+                        <p>If employee hasn't activated their account, resend the invitation email</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Reset Password</h4>
+                        <p>Help an employee reset their password if they've forgotten it</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>View Activity</h4>
+                        <p>See the employee's complete attendance history and login activity</p>
+                    </div>
+                </section>
+
+                <!-- Employee Profiles -->
+                <section id="employee-profiles" class="content-section">
+                    <h2><i class="bi bi-card-text"></i> Employee Profiles</h2>
+                    <p>Maintain complete and accurate employee profiles for compliance and HR purposes.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Profile Information Checklist</h4>
+                    <ul class="feature-list">
+                        <li>Full name and National ID</li>
+                        <li>Email and phone number</li>
+                        <li>Job title and department</li>
+                        <li>Employment type and contract date</li>
+                        <li>Salary grade and benefits information</li>
+                        <li>Bank account details (if available)</li>
+                        <li>Emergency contact information</li>
+                        <li>Work location assignment</li>
+                        <li>Manager/reporting structure</li>
+                        <li>Work schedule and hours</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <i class="bi bi-shield-check"></i> <strong>Data Security:</strong> All employee information is encrypted and protected. Only authorized managers can view employee data relevant to their team.
+                    </div>
+                </section>
+
+                <!-- Work Schedules -->
+                <section id="work-schedules" class="content-section">
+                    <h2><i class="bi bi-calendar-event"></i> Work Schedules & Hours</h2>
+                    <p>Set and manage different work schedules for flexibility and compliance with labor regulations.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Standard Work Schedule Setup</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Schedules</h4>
+                                <p>Go to <strong>"Settings"</strong> → <strong>"Work Schedules"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Create Schedule Template</h4>
+                                <p>Click <strong>"Create Schedule"</strong> and name it (e.g., "Standard 9-5")</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Set Daily Hours</h4>
+                                <p>For each day of the week, set:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Start time (e.g., 9:00 AM)</li>
+                                    <li>End time (e.g., 5:00 PM)</li>
+                                    <li>Break duration (e.g., 1 hour)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Set Weekly Hours</h4>
+                                <p>System calculates total weekly hours (typically 40 hours for full-time in Saudi Arabia)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Assign to Employees</h4>
+                                <p>Apply the schedule to relevant employees or departments</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Flexible Work Schedules</h4>
+                    <div class="highlight-box">
+                        Techsup Track supports various flexible arrangements: part-time work, shift systems, compressed workweeks, and remote work. Configure each schedule type according to your company needs and labor law compliance.
+                    </div>
+                </section>
+
+                <!-- Attendance Monitoring -->
+                <section id="attendance-monitoring" class="content-section">
+                    <h2><i class="bi bi-eye"></i> Real-Time Attendance Monitoring</h2>
+                    <p>Monitor employee attendance in real-time and manage attendance-related issues.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Live Attendance Dashboard</h4>
+                    <div class="highlight-box">
+                        Your main dashboard displays a live view of who's checked in today, who's on break, who's checked out, and who's absent. Updates in real-time as employees check in/out.
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Managing Late Check-Ins</h4>
+                    <div class="card-feature">
+                        <h4>View Late Arrivals</h4>
+                        <p>The system flags any check-ins after the scheduled start time. You can review and take appropriate action.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Late Approval/Adjustment</h4>
+                        <p>If an employee was delayed for valid reasons, you can approve the late check-in or adjust the time manually.</p>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Managing Absences</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Identify Absent Employee</h4>
+                                <p>The attendance dashboard shows employees who didn't check in by end of start time</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click on Employee</h4>
+                                <p>Click the absent employee to view details</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Mark Status</h4>
+                                <p>You can mark them as: Absent (unexcused), On Leave (if pre-approved), or manually record a check-in</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Add Notes</h4>
+                                <p>Optionally add notes about the absence for record-keeping</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Save Record</h4>
+                                <p>The absence is recorded and included in reports and compliance documentation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-lightbulb"></i> <strong>Absence Patterns:</strong> Monitor recurring absences, which might indicate performance issues or need for support conversations.
+                    </div>
+                </section>
+
+                <!-- Reports Section -->
+                <section id="reports" class="content-section">
+                    <h2><i class="bi bi-bar-chart-line"></i> Generating & Viewing Reports</h2>
+                    <p>Access comprehensive reports to monitor attendance, performance, and ensure compliance with regulations.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Types of Reports Available</h4>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-calendar-day"></i> Daily Attendance Report</h4>
+                        <p>Shows all check-ins, check-outs, absences, and working hours for a specific day</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-calendar-week"></i> Weekly Attendance Report</h4>
+                        <p>Weekly summary showing total hours, punctuality, absences, and trends</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-calendar-month"></i> Monthly Report</h4>
+                        <p>Complete monthly attendance data for payroll, compliance, and analysis</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-graph-up"></i> Performance Analytics</h4>
+                        <p>Charts and graphs showing attendance trends, punctuality rates, and team productivity</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-list-check"></i> Leave & Absence Report</h4>
+                        <p>Detailed breakdown of approved leaves, unexcused absences, and pending requests</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4><i class="bi bi-shield-check"></i> Compliance Report</h4>
+                        <p>Government compliance documentation meeting Saudi labor law requirements</p>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Accessing Reports</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Reports</h4>
+                                <p>Click <strong>"Reports"</strong> from the main menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Select Report Type</h4>
+                                <p>Choose which report you need (daily, weekly, monthly, etc.)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Set Parameters</h4>
+                                <p>Select date range, department/team, or specific employees to include</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Generate Report</h4>
+                                <p>Click <strong>"Generate"</strong> to create the report</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>View & Analyze</h4>
+                                <p>Review the report on screen, or proceed to export it</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Export Data -->
+                <section id="export-data" class="content-section">
+                    <h2><i class="bi bi-download"></i> Exporting Reports & Data</h2>
+                    <p>Download reports in various formats for backup, analysis, or sharing with stakeholders.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Export Options</h4>
+                    <div class="highlight-box">
+                        <strong>Supported Formats:</strong> PDF (formatted and professional), Excel (.xlsx for analysis), CSV (for data systems), and JSON (for integration)
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">How to Export</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Generate Your Report</h4>
+                                <p>Create the report you want to export</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click Export</h4>
+                                <p>Look for the <strong>"Export"</strong> button, usually at the top-right</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Choose Format</h4>
+                                <p>Select PDF, Excel, CSV, or other available format</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Download</h4>
+                                <p>The file downloads automatically to your device</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Store Securely</h4>
+                                <p>Keep exported reports in a secure location for record-keeping and compliance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Scheduled Reports:</strong> You can also set up automated reports to be generated and emailed to you daily, weekly, or monthly.
+                    </div>
+                </section>
+
+                <!-- Performance Analytics -->
+                <section id="performance-analytics" class="content-section">
+                    <h2><i class="bi bi-graph-up"></i> Performance Analytics & Insights</h2>
+                    <p>Use data-driven insights to make better decisions about your workforce.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Key Metrics</h4>
+
+                    <div class="card-feature">
+                        <h4>Attendance Rate</h4>
+                        <p>Percentage of days employees were present. High rates indicate good workforce stability.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Punctuality Score</h4>
+                        <p>Percentage of on-time arrivals. Identifies patterns of late check-ins.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Average Working Hours</h4>
+                        <p>Track if employees are meeting required hours or working overtime patterns.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Absence Trends</h4>
+                        <p>Identify patterns: frequent absences on specific days, particular employees with issues.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Leave Patterns</h4>
+                        <p>Analyze approved leave usage and plan for coverage.</p>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Using Analytics for Decision-Making</h4>
+                    <ul class="feature-list">
+                        <li>Identify underperforming employees who need support</li>
+                        <li>Plan staffing for busy periods</li>
+                        <li>Spot potential policy violations or attendance issues</li>
+                        <li>Benchmark against company standards</li>
+                        <li>Make data-backed hiring decisions</li>
+                    </ul>
+                </section>
+
+                <!-- Messaging System -->
+                <section id="messaging" class="content-section">
+                    <h2><i class="bi bi-chat-dots"></i> Internal Messaging System</h2>
+                    <p>Communicate directly with employees and teams without leaving the platform.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Sending Messages to Employees</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Messages</h4>
+                                <p>Click <strong>"Messages"</strong> from the main menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Start Conversation</h4>
+                                <p>Click <strong>"New Message"</strong> or select an existing conversation</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Select Recipient(s)</h4>
+                                <p>Choose individual employee(s) or entire department/team</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Compose Message</h4>
+                                <p>Type your message. You can format text (bold, italic, bullets) and attach files.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Send</h4>
+                                <p>Click <strong>"Send"</strong>. Employees receive notifications based on their settings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Message Features:</strong> You can mark messages as urgent, request read receipts, schedule messages for later, and set message expiration dates.
+                    </div>
+                </section>
+
+                <!-- Announcements -->
+                <section id="announcements" class="content-section">
+                    <h2><i class="bi bi-megaphone"></i> Company Announcements</h2>
+                    <p>Broadcast important messages to all employees or specific groups.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Creating Announcements</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Announcements</h4>
+                                <p>Go to <strong>"Communications"</strong> → <strong>"Announcements"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Create New Announcement</h4>
+                                <p>Click <strong>"Create Announcement"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Write Title & Content</h4>
+                                <p>Create a clear title and detailed announcement content</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Select Audience</h4>
+                                <p>Choose who sees it: all employees, specific departments, or certain roles</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Schedule (Optional)</h4>
+                                <p>Publish immediately or schedule for a specific date/time</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Publish</h4>
+                                <p>Click <strong>"Publish"</strong> and all relevant employees are notified</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-lightbulb"></i> <strong>Best Practices:</strong> Use announcements for company-wide updates, policy changes, holidays, or important deadlines. Use direct messages for individual feedback.
+                    </div>
+                </section>
+
+                <!-- Notifications -->
+                <section id="notifications" class="content-section">
+                    <h2><i class="bi bi-bell-fill"></i> Notification Settings</h2>
+                    <p>Manage how you and your team receive important alerts and updates.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Configuring Notifications</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Settings</h4>
+                                <p>Click your profile icon and select <strong>"Settings"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Find Notifications</h4>
+                                <p>Navigate to <strong>"Notifications"</strong> section</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Select Notification Types</h4>
+                                <p>Choose which events trigger notifications (absences, new messages, approvals, etc.)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Choose Delivery Method</h4>
+                                <p>Select: email, SMS, in-app notifications, or combination</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Set Quiet Hours (Optional)</h4>
+                                <p>Define times when you don't want to receive notifications</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Save Settings</h4>
+                                <p>Click <strong>"Save"</strong> to apply preferences</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Critical Alerts</h4>
+                    <div class="highlight-box">
+                        Certain events will always trigger notifications regardless of settings: security alerts, system maintenance, critical compliance issues, and employee emergencies.
+                    </div>
+                </section>
+
+                <!-- Labor Compliance -->
+                <section id="labor-compliance" class="content-section">
+                    <h2><i class="bi bi-shield-check"></i> Labor Law Compliance</h2>
+                    <p>Ensure your company meets all Saudi Arabian labor law requirements using Techsup Track.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Key Compliance Areas</h4>
+
+                    <div class="card-feature">
+                        <h4>Working Hours Limits</h4>
+                        <p>Saudi law limits standard workday to 8 hours. Techsup Track automatically flags violations and calculates overtime correctly.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Break Requirements</h4>
+                        <p>Employees are entitled to breaks. The system ensures break deductions are accurate and compliant.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Leave Entitlements</h4>
+                        <p>Annual leave, sick leave, and other entitlements are tracked and managed according to Saudi labor law.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Overtime Management</h4>
+                        <p>Hours beyond standard are flagged as overtime and tracked separately for compensation.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Remote Work Compliance</h4>
+                        <p>For flexible/remote workers, the system documents arrangements and monitors compliance with regulations.</p>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Compliance Reports</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Generate Compliance Report</h4>
+                                <p>Go to <strong>"Reports"</strong> → <strong>"Compliance"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Select Period</h4>
+                                <p>Choose the reporting period (usually monthly)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Review Compliance</h4>
+                                <p>The report shows compliance status across all requirements</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Address Issues</h4>
+                                <p>Any violations are highlighted. Take corrective action as needed.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Archive for Inspection</h4>
+                                <p>Keep compliance reports for government inspections and audits</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <i class="bi bi-shield-check"></i> <strong>Legal Responsibility:</strong> Your company is responsible for ensuring labor law compliance. Techsup Track aids this, but you must verify compliance independently and consult with legal advisors if needed.
+                    </div>
+                </section>
+
+                <!-- Data Security -->
+                <section id="data-security" class="content-section">
+                    <h2><i class="bi bi-lock"></i> Data Security & Privacy</h2>
+                    <p>Techsup Track implements enterprise-level security to protect sensitive employee data.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Security Features</h4>
+                    <ul class="feature-list">
+                        <li>End-to-end encryption of all data transmission</li>
+                        <li>Secure password hashing and two-factor authentication</li>
+                        <li>Role-based access control (employees see only their data)</li>
+                        <li>Audit logs tracking all system access and changes</li>
+                        <li>Regular security audits and penetration testing</li>
+                        <li>GDPR and Saudi data protection compliance</li>
+                        <li>Data backup and disaster recovery systems</li>
+                        <li>Secure data deletion upon contract termination</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Best Practices for Admins</h4>
+                    <div class="highlight-box">
+                        <strong>1. Use Strong Passwords:</strong> Create complex admin passwords. Change them regularly and never share.
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>2. Enable Two-Factor Auth:</strong> Always enable 2FA on your admin account for extra security.
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>3. Regular Access Audits:</strong> Periodically review who has access and remove unused accounts.
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>4. Limit Admin Users:</strong> Only give admin access to people who absolutely need it.
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>5. Secure Export Handling:</strong> When exporting reports with employee data, store and transmit securely.
+                    </div>
+                </section>
+
+                <!-- Regulatory Reports -->
+                <section id="regulatory" class="content-section">
+                    <h2><i class="bi bi-file-earmark-check"></i> Regulatory Reports</h2>
+                    <p>Generate and maintain documentation required by Saudi government agencies.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Reporting Requirements</h4>
+
+                    <div class="card-feature">
+                        <h4>Ministry of Labor Reports</h4>
+                        <p>Compliance documentation for labor inspections and audits. Techsup Track generates these automatically.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Attendance Records</h4>
+                        <p>Official attendance documentation required to be kept for at least 2 years.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Payroll Integration</h4>
+                        <p>Data compatible with payroll systems for accurate salary calculations.</p>
+                    </div>
+
+                    <div class="card-feature">
+                        <h4>Tax Reporting</h4>
+                        <p>Employee data and working hours needed for tax compliance documentation.</p>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">FAQ for Company Admins</h4>
+
+                    <div class="accordion" id="companyFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq1">
+                                    How many employees can I add to my account?
+                                </button>
+                            </h2>
+                            <div id="cfaq1" class="accordion-collapse collapse show" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    There's no limit on employee count. Your plan type determines features and support levels, but you can add as many employees as needed.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq2">
+                                    Can employees access their data and reports?
+                                </button>
+                            </h2>
+                            <div id="cfaq2" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    Yes, employees can access their own attendance, reports, and communication. Managers can configure visibility levels to control what information employees see about colleagues.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq3">
+                                    What happens if an employee loses their phone?
+                                </button>
+                            </h2>
+                            <div id="cfaq3" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    They can log in to the web version on any device. You (as admin) can also manually record their attendance if they're unable to check in themselves temporarily.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq4">
+                                    How is GPS accuracy verified?
+                                </button>
+                            </h2>
+                            <div id="cfaq4" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    GPS coordinates are verified against your configured work locations with a geofence radius (typically 100-200m). Check-ins outside this radius are flagged for review.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq5">
+                                    Can I integrate Techsup Track with my payroll system?
+                                </button>
+                            </h2>
+                            <div id="cfaq5" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    Yes, Techsup Track offers API integration with major payroll systems. Contact support for integration assistance and requirements.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq6">
+                                    What if there's a system outage?
+                                </button>
+                            </h2>
+                            <div id="cfaq6" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    Techsup Track has 99.9% uptime guarantee with automatic failover. During outages, you can manually record attendance and sync when system is restored. Employees are notified automatically.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq7">
+                                    How do I handle employee appeals about attendance records?
+                                </button>
+                            </h2>
+                            <div id="cfaq7" class="accordion-collapse collapse" data-bs-parent="#companyFaq">
+                                <div class="accordion-body">
+                                    Employees can dispute records through the system. You review the dispute with supporting evidence. If valid, you can manually adjust the record with notes explaining the change.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Active link highlighting based on scroll position
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

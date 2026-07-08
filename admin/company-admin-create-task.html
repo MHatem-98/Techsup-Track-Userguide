@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task - Techsup Track Company Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="company-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Company Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="company-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->
+            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Companies</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Employees</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-verify-employees.html">Verify Employees</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Managers</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">System Email</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Odoo Integration</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-odoo.html">Imported Companies (Odoo)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Global Holidays</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-global-holiday.html">Add Global Holiday</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Project Tasks</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" aria-current="page" href="super-admin-default-project-tasks.html">Default Project Tasks</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-home.html">Company Admin Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Reports</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-shifts.html">Reports by Shifts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-hours.html">Reports by Hours</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-tasks.html">Reports by Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-archive.html">Reports Archive</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Employees</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-employees.html">Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-hire.html">Hire</a></li>
+                        </ul>
+                    </div>
+           
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Activity Logs</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-logs.html">Activity Logs</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-statistics.html">Activity Statistics</a></li>
+                        </ul>
+                    </div>
+ 
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Projects</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-projects.html">All Projects</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-project.html">Create Project</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-projects.html">Trashed Projects</a></li>
+                        </ul>
+                    </div>
+ 
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Tasks Management</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-tasks.html">Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" href="company-admin-create-task.html">Create Task</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-tasks.html">Trashed Tasks</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">COMPANY ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Create Task</h1>
+                    <p class="lead mb-0">Create a new task — assign it to a project, set a due date, and delegate it to a team member.</p>
+                </div>
+
+                <section id="create-task" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-plus-circle text-info fs-4"></i> Creating a New Task</h2>
+                    <p>From the Tasks page, click <strong>+ Create Task</strong> to open the task creation form. Fill in the task details to create a new task and automatically assign it to an employee.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-4">Step 1 — Basic Task Information</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Task Name*</h4>
+                                <p>Give the task a clear, concise name that describes what needs to be done. Examples: "Review client proposal", "Fix login bug", "Write product documentation" (required).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Description</h4>
+                                <p>Optional: Provide detailed instructions, acceptance criteria, or additional context to help the assignee understand exactly what's needed.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Priority*</h4>
+                                <p>Set task priority: <strong>Low</strong>, <strong>Medium</strong>, or <strong>High</strong> (required).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Step 2 — Project & Assignment</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Select Project*</h4>
+                                <p>Choose which project this task belongs to from the dropdown (required).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Assign To*</h4>
+                                <p>Select the team member responsible for completing this task (required).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Step 3 — Due Date & Status</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Start Date</h4>
+                                <p>Optional: When should work begin on this task (optional).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Due Date*</h4>
+                                <p>Enter the deadline (required). This should be realistic and agreed upon.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Initial Status*</h4>
+                                <p>Set the initial status: <strong>Not Started</strong>, <strong>In Progress</strong>, or <strong>Completed</strong> (required).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Step 4 — Attachments (Optional)</h4>
+                    <p>Upload any reference files, images, or documents that help clarify the task requirements by dragging and dropping or clicking <strong>Choose Files</strong>.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Save the Task</h4>
+                    <p>Once all required fields are completed, click <strong>Save</strong> to create the task, or <strong>Cancel</strong> to discard the form.</p>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> Clear task names and good descriptions reduce back-and-forth questions. Set realistic due dates and always notify the assignee about their new tasks right away.
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

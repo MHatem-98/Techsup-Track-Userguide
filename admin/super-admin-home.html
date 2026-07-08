@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Dashboard - Techsup Track Super Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="super-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Super Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="super-admin-company-logs.html"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="super-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->
+            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" aria-current="page" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Companies</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">SUPER ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Home Dashboard</h1>
+                    <p class="lead mb-0">A single screen that gives Super Admins a real-time snapshot of every company, employee, contract, and activity across the whole Techsup Track platform.</p>
+                </div>
+
+                <section id="home-dashboard" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-speedometer2 text-info fs-4"></i> Understanding Your Home Dashboard</h2>
+                    <p>As a Super Admin, the Home dashboard is the first thing you see after logging in. It aggregates data from every company on the platform, so you can monitor overall health without opening each company individually.</p>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <strong><i class="bi bi-info-circle me-2"></i> Who sees this?</strong>
+                        <p class="mt-2 mb-0">This dashboard is only visible to Super Admin accounts. Company-level admins and managers only see data for their own company.</p>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-4">Filtering the Dashboard</h4>
+                    <p>Every metric on this page can be narrowed to a specific time range.</p>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Pick a Quick Range</h4>
+                                <p>Use the quick filter buttons — <strong>Today</strong>, <strong>Last Week</strong>, <strong>This Month</strong>, or <strong>This Quarter</strong> — to instantly update every card and chart.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Or Set a Custom Range</h4>
+                                <p>Enter a <strong>Start Date</strong> and <strong>End Date</strong> manually, then click <strong>Search</strong> to apply it.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Reset When Done</h4>
+                                <p>Click <strong>Reset</strong> to clear the filter and return to the default view. The active filter is always shown in the blue banner above the metric cards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">What Each Metric Card Shows</h4>
+                    <p>The dashboard groups platform-wide numbers into cards. Most cards break down into an Active / Pending / Inactive (or similar) status underneath the headline number.</p>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-building text-info me-1"></i> Companies</h4>
+                                <p class="mb-0">Total number of companies on the platform, split by Active, Pending, and Inactive status.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-people text-info me-1"></i> Total Employees</h4>
+                                <p class="mb-0">All employees across every company, broken down by Active, Pending, and Inactive.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-file-earmark-text text-info me-1"></i> Contracts</h4>
+                                <p class="mb-0">Total contracts platform-wide, split into Active Contracts, Ended Contracts, and Unknown End Date.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-briefcase text-info me-1"></i> Company Contracts</h4>
+                                <p class="mb-0">Contracts specific to companies (as opposed to individual employees), with the same Active / Ended / Unknown breakdown.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-star text-info me-1"></i> Super Admins</h4>
+                                <p class="mb-0">Count of accounts with Super Admin access across the platform.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-person-badge text-info me-1"></i> Managers &amp; Admins</h4>
+                                <p class="mb-0">Total Managers and Admins platform-wide, each with Active / Pending / Inactive status counts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-kanban text-info me-1"></i> Projects &amp; Tasks</h4>
+                                <p class="mb-0">Total Projects and Tasks, split into Active and Ended.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-folder text-info me-1"></i> Files</h4>
+                                <p class="mb-0">Total files shared platform-wide, split by Emails and Guest Messages.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-envelope-open text-info me-1"></i> Contact Requests</h4>
+                                <p class="mb-0">Inbound contact requests, broken into Redirected, Pending, and Closed.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-calendar3 text-info me-1"></i> Shifts &amp; Single-User Shifts</h4>
+                                <p class="mb-0">Total scheduled shifts (Active / Inactive) and shifts assigned to a single employee.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-house-heart text-info me-1"></i> Holidays</h4>
+                                <p class="mb-0">Total configured holidays, split into Public and Private.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-clock-history text-info me-1"></i> Activity Logs</h4>
+                                <p class="mb-0">Total logged system events, plus a timestamp of the last activity and current Online / Offline counts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-person-check text-info me-1"></i> License &amp; Live Usage</h4>
+                                <p class="mb-0"><strong>Total Allowed License Employees</strong> shows how many employee seats are licensed platform-wide. <strong>Employees Working Now</strong> shows how many are currently checked in.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Visual Breakdown Charts</h4>
+                    <p>Below the metric cards, donut charts visualize the same Companies, Total Employees, Contracts, Projects, and Tasks numbers so you can quickly spot the ratio between Active, Pending, Inactive, and Ended items at a glance.</p>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> Use the date filter to compare periods — for example, switch to "Last Week" to check how many companies or employees were added recently, then reset to see all-time totals.
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

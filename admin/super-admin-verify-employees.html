@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Employees - Techsup Track Super Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="super-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Super Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="super-admin-company-logs.html"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="super-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->
+            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Companies</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Employees</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" aria-current="page" href="super-admin-verify-employees.html">Verify Employees</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Managers</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">System Email</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">SUPER ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Verify Employees</h1>
+                    <p class="lead mb-0">Review newly added employees and confirm their accounts before they can fully use the platform.</p>
+                </div>
+
+                <section id="verify-employees" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-patch-check text-info fs-4"></i> Verifying Employee Accounts</h2>
+                    <p>The <strong>Verify</strong> page (under <strong>Employees &rarr; Verify</strong>) lists employees whose accounts still need review. This is the same Employees List view, but it's where you'll spot and act on any employee flagged as <span class="badge text-bg-warning text-dark">Unverified</span>.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-4">Reading the Employees List</h4>
+                    <div class="table-card">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>What it shows</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Profile Photo</strong></td>
+                                    <td>The employee's photo or avatar</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Full Name</strong></td>
+                                    <td>Employee's name and internal ID</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email</strong></td>
+                                    <td>Registered email address</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Salary Type</strong></td>
+                                    <td>How the employee is paid (e.g. Salaried)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Assigned Shift</strong></td>
+                                    <td>The employee's shift, or "No Shift" if none has been assigned yet</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Status</strong></td>
+                                    <td>Current account status — typically <strong>Pending</strong> for newly created employees</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Verified</strong></td>
+                                    <td>A red <span class="badge text-bg-warning text-dark">Unverified</span> badge means the account still needs review; a verified badge means it's confirmed</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Actions</strong></td>
+                                    <td>Open the Actions menu to verify, edit, or manage the employee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">How to Verify an Employee</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Find the Employee</h4>
+                                <p>Look for rows with the <strong>Unverified</strong> badge in the Verified column.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Review Their Details</h4>
+                                <p>Double-check the name, email, and salary information are correct before verifying.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Open Actions and Verify</h4>
+                                <p>Click <strong>Actions</strong> on that row and choose the verify option to confirm the account.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Exporting the List</h4>
+                    <p>Click <strong>+ Export</strong> in the top-right corner to download the current Employees List for offline review or record-keeping.</p>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> An employee that stays Unverified won't be fully active on the platform — verify new employees promptly so they can check in, receive shifts, and be included in reports.
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

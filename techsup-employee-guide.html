@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsup Track - Employee User Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #1a3a52;
+            --secondary: #00A8E8;
+            --accent: #FFA500;
+            --light-bg: #f8f9fa;
+            --border-light: #e9ecef;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: var(--primary) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .navbar-brand i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #2a5073 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .badge-primary {
+            background-color: var(--secondary) !important;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-nav {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .nav-section {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .nav-section-title {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nav-links li:last-child {
+            border-bottom: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background-color: #e9ecef;
+            border-left-color: var(--secondary);
+            color: var(--secondary);
+            padding-left: calc(1rem + 4px);
+        }
+
+        .nav-links a.active {
+            background-color: rgba(0, 168, 232, 0.1);
+            border-left-color: var(--secondary);
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .content-section {
+            scroll-margin-top: 100px;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .content-section h2 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-section h2 i {
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .step-container {
+            margin-top: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--secondary);
+        }
+
+        .step-number {
+            background-color: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            margin: 0.5rem 0 0 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background-color: rgba(0, 168, 232, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--secondary);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #333;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tip-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #00A8E8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .tip-box i {
+            color: #00A8E8;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .button-guide {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(0, 168, 232, 0.1) !important;
+            color: var(--primary) !important;
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(0, 168, 232, 0.25) !important;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .toc-badge {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .sidebar-nav {
+                position: static;
+                margin-bottom: 2rem;
+            }
+
+            .nav-section {
+                margin-bottom: 1rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .step-number {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#top">
+                <i class="bi bi-clock-history"></i>Techsup Track
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#getting-started">Getting Started</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#attendance">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#communication">Communication</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container-lg">
+            <span class="badge-primary"><i class="bi bi-person-check"></i> Employee Guide</span>
+            <h1>Master Techsup Track</h1>
+            <p>Your complete guide to using Techsup Track for flexible work management, attendance tracking, and direct communication with your management.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-lg">
+        <div class="row g-4">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3">
+                <div class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-section-title">Navigation</div>
+                        <ul class="nav-links">
+                            <li><a href="#getting-started">Getting Started</a></li>
+                            <li><a href="#registration">Registration Process</a></li>
+                            <li><a href="#login">Login & Dashboard</a></li>
+                            <li><a href="#profile-setup">Profile Setup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Core Features</div>
+                        <ul class="nav-links">
+                            <li><a href="#attendance">Attendance System</a></li>
+                            <li><a href="#check-in">Check-In Process</a></li>
+                            <li><a href="#check-out">Check-Out Process</a></li>
+                            <li><a href="#time-tracking">Time Tracking</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Reports & Analytics</div>
+                        <ul class="nav-links">
+                            <li><a href="#reports">View Reports</a></li>
+                            <li><a href="#daily-reports">Daily Reports</a></li>
+                            <li><a href="#export-reports">Export Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Communication</div>
+                        <ul class="nav-links">
+                            <li><a href="#communication">Messaging System</a></li>
+                            <li><a href="#file-sharing">File Sharing</a></li>
+                            <li><a href="#notifications">Notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Mobile App</div>
+                        <ul class="nav-links">
+                            <li><a href="#mobile-app">Getting Started</a></li>
+                            <li><a href="#mobile-features">App Features</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <!-- Getting Started Section -->
+                <section id="getting-started" class="content-section">
+                    <h2><i class="bi bi-rocket"></i> Getting Started with Techsup Track</h2>
+                    <p>Welcome to Techsup Track! This guide will walk you through every step of using our platform. Whether you're a new user or looking to explore advanced features, you'll find everything you need here.</p>
+                    
+                    <div class="highlight-box">
+                        <strong><i class="bi bi-info-circle"></i> What is Techsup Track?</strong>
+                        <p style="margin-top: 0.5rem; margin-bottom: 0;">Techsup Track is a flexible work and attendance tracking platform certified by the Saudi Ministry of Human Resources and Social Development. It allows you to record your attendance, view comprehensive reports, and communicate directly with your management—all from one secure platform.</p>
+                    </div>
+
+                    <h4 style="margin-top: 2rem; color: var(--primary); font-weight: 600;">Key Features for You</h4>
+                    <ul class="feature-list">
+                        <li>One-click attendance and departure recording</li>
+                        <li>Automatic calculation of daily working hours</li>
+                        <li>Comprehensive daily, weekly, and monthly reports</li>
+                        <li>Direct communication channel with your management</li>
+                        <li>File sharing and document upload capabilities</li>
+                        <li>Mobile app access (Android & iOS)</li>
+                        <li>Full compliance with Saudi remote work requirements</li>
+                    </ul>
+                </section>
+
+                <!-- Registration Section -->
+                <section id="registration" class="content-section">
+                    <h2><i class="bi bi-person-plus"></i> Registration Process</h2>
+                    <p>Follow these steps to create your Techsup Track account as an employee or job seeker.</p>
+
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Visit the Registration Page</h4>
+                                <p>Navigate to the <strong>Employee Login</strong> page on Techsup Track's website and click <strong>"Create your account"</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Enter Your Email Address</h4>
+                                <p>Provide a valid email address. This will be your primary login credential and where we send important notifications.</p>
+                                <div class="tip-box">
+                                    <i class="bi bi-lightbulb"></i> Use an email you check regularly
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Create a Strong Password</h4>
+                                <p>Set a secure password with at least 8 characters, including uppercase letters, numbers, and special characters.</p>
+                                <div class="button-guide">
+                                    Example: MySecure@Pass123
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Provide Personal Information</h4>
+                                <p>Fill in your full name, phone number, and national ID. Ensure all details match your official documents.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Agree to Terms & Conditions</h4>
+                                <p>Read and accept the Terms & Conditions and Privacy Policy. This ensures compliance with Saudi labor regulations.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Verify Your Email</h4>
+                                <p>Check your email inbox for a verification link. Click it to confirm your account. If you don't see it, check your spam folder.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h4>Account Activation</h4>
+                                <p>Your account will be activated by your employer after they approve your registration. You'll receive a confirmation email once your account is ready to use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Login & Dashboard -->
+                <section id="login" class="content-section">
+                    <h2><i class="bi bi-box-arrow-in-right"></i> Login & Dashboard Overview</h2>
+                    
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Logging Into Your Account</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Login Page</h4>
+                                <p>Visit techsuptrack.com and click <strong>"Employee Login"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Enter Credentials</h4>
+                                <p>Input your registered email and password</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Two-Factor Authentication (Optional)</h4>
+                                <p>If enabled, enter the code sent to your phone or email</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Access Your Dashboard</h4>
+                                <p>You're now in! Your personalized dashboard displays all your information at a glance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Dashboard Components</h4>
+                    <div class="highlight-box">
+                        <strong>Welcome Section:</strong> Displays your name, current status (online/offline), and quick action buttons
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Attendance Widget:</strong> Shows today's check-in/check-out status and current working time
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Quick Stats:</strong> Weekly working hours summary, absences, and performance overview
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Notifications:</strong> Messages from management and system alerts
+                    </div>
+                </section>
+
+                <!-- Profile Setup -->
+                <section id="profile-setup" class="content-section">
+                    <h2><i class="bi bi-person-circle"></i> Setting Up Your Profile</h2>
+                    <p>Complete your profile to ensure accurate record-keeping and better communication with your manager.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Profile Information</h4>
+                    <ul class="feature-list">
+                        <li>Full Name - Must match official documents</li>
+                        <li>Email Address - Primary contact method</li>
+                        <li>Phone Number - For notifications and communication</li>
+                        <li>National ID - For compliance and verification</li>
+                        <li>Bank Account (if required) - For salary processing</li>
+                        <li>Emergency Contact - Important for safety protocols</li>
+                        <li>Work Schedule Preference - Your preferred working hours</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <i class="bi bi-shield-check"></i> <strong>Security Reminder:</strong> Never share your login credentials with anyone, including management or system administrators.
+                    </div>
+                </section>
+
+                <!-- Attendance System -->
+                <section id="attendance" class="content-section">
+                    <h2><i class="bi bi-calendar-check"></i> Attendance System</h2>
+                    <p>The core feature of Techsup Track is its flexible and accurate attendance tracking system. Learn how to properly record your work time.</p>
+
+                    <div class="highlight-box">
+                        <strong>How It Works:</strong> The system automatically calculates your working hours, lunch breaks, and rest periods. All data is timestamped and GPS-verified for accuracy and compliance with Saudi labor regulations.
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Attendance Status Options</h4>
+                    <div class="accordion" id="attendanceAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="bi bi-circle-fill" style="color: #28a745; margin-right: 0.5rem; font-size: 0.6rem;"></i> Present
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#attendanceAccordion">
+                                <div class="accordion-body">
+                                    You are at work and actively working. Record your check-in when you start your workday.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-circle-fill" style="color: #ffc107; margin-right: 0.5rem; font-size: 0.6rem;"></i> On Break
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#attendanceAccordion">
+                                <div class="accordion-body">
+                                    You're taking a lunch break or rest period. The system automatically tracks break duration and deducts it from your working hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-circle-fill" style="color: #dc3545; margin-right: 0.5rem; font-size: 0.6rem;"></i> Absent
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#attendanceAccordion">
+                                <div class="accordion-body">
+                                    You did not show up for work or requested leave. Contact your management if this wasn't planned.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="bi bi-circle-fill" style="color: #6f42c1; margin-right: 0.5rem; font-size: 0.6rem;"></i> Leave
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#attendanceAccordion">
+                                <div class="accordion-body">
+                                    You requested approved leave (vacation, sick leave, etc.). This is recorded separately from absences.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Check-In Process -->
+                <section id="check-in" class="content-section">
+                    <h2><i class="bi bi-arrow-up-circle"></i> Check-In Process</h2>
+                    <p>Record your arrival at the start of your workday with a single click.</p>
+
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Open Techsup Track</h4>
+                                <p>Log in to your dashboard or open the mobile app</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Locate the Check-In Button</h4>
+                                <p>On your dashboard, you'll see a prominent <strong>"Check In"</strong> button. It's usually displayed in the main widget.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Click Check-In</h4>
+                                <p>Click the button. The system will automatically capture:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Current time (timestamp)</li>
+                                    <li>Your location (GPS)</li>
+                                    <li>Device information</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Confirmation</h4>
+                                <p>You'll receive an on-screen confirmation: <strong>"Check-in successful at [Time]"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Begin Work</h4>
+                                <p>Your status is now "Present" and your working time counter has started. Get to work!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-exclamation-triangle"></i> <strong>Important:</strong> Always check in from your designated work location. GPS verification is required for compliance.
+                    </div>
+                </section>
+
+                <!-- Check-Out Process -->
+                <section id="check-out" class="content-section">
+                    <h2><i class="bi bi-arrow-down-circle"></i> Check-Out Process</h2>
+                    <p>Record your departure at the end of your workday.</p>
+
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Finish Your Work</h4>
+                                <p>Complete all tasks and ensure you're ready to finish your workday</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Open Techsup Track</h4>
+                                <p>Go to your dashboard or mobile app</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Click Check-Out</h4>
+                                <p>The <strong>"Check Out"</strong> button will be visible. Click it to record your departure time.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>System Calculation</h4>
+                                <p>The system will automatically:</p>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li>Calculate total working hours</li>
+                                    <li>Deduct any break time</li>
+                                    <li>Update your daily report</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Confirmation</h4>
+                                <p>Receive confirmation: <strong>"Check-out successful. You worked [X hours]"</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Daily Summary:</strong> After check-out, your dashboard updates with today's working hours summary
+                    </div>
+                </section>
+
+                <!-- Time Tracking -->
+                <section id="time-tracking" class="content-section">
+                    <h2><i class="bi bi-hourglass-split"></i> Time Tracking & Breaks</h2>
+                    <p>The system automatically tracks all your time, including breaks and lunch periods.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">How Breaks Work</h4>
+                    <div class="highlight-box">
+                        The system recognizes when you're on break and automatically pauses your work timer. You can manually mark a break or the system can detect inactivity. Break time is NOT counted toward your working hours—only your actual work time is recorded.
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Recording a Break</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Click "Take Break"</h4>
+                                <p>When you're taking a break, click the break button on your dashboard</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Pause Timer</h4>
+                                <p>Your working time counter pauses automatically</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Resume Work</h4>
+                                <p>Click "Resume" when your break is over to continue tracking</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-info-circle"></i> Most companies allow 1 hour for lunch break. Check your employment contract for your specific break policy.
+                    </div>
+                </section>
+
+                <!-- Reports Section -->
+                <section id="reports" class="content-section">
+                    <h2><i class="bi bi-bar-chart"></i> Viewing Your Reports</h2>
+                    <p>Access comprehensive reports about your attendance and working hours. These reports are essential for payroll, compliance, and performance analysis.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Types of Reports Available</h4>
+                </section>
+
+                <!-- Daily Reports -->
+                <section id="daily-reports" class="content-section">
+                    <h3 style="color: var(--primary); font-weight: 600;"><i class="bi bi-calendar-day"></i> Daily Reports</h3>
+                    <p>View detailed information about each workday.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem; font-size: 0.95rem;">Information Included:</h4>
+                    <ul class="feature-list">
+                        <li>Check-in and check-out times</li>
+                        <li>Total working hours</li>
+                        <li>Break duration</li>
+                        <li>Attendance status (Present, Absent, Leave)</li>
+                        <li>Location history (GPS coordinates)</li>
+                        <li>Any notes or remarks from management</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem; font-size: 0.95rem;">How to Access:</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Reports</h4>
+                                <p>Click the <strong>"Reports"</strong> section in your dashboard menu</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Select Daily Report</h4>
+                                <p>Choose <strong>"Daily Report"</strong> from the options</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Pick a Date</h4>
+                                <p>Use the date picker to select which day you want to view</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>View Details</h4>
+                                <p>The report displays all your attendance information for that day</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Export Reports -->
+                <section id="export-reports" class="content-section">
+                    <h2><i class="bi bi-download"></i> Exporting Reports</h2>
+                    <p>Download your reports in PDF or Excel format for record-keeping, sharing with your employer, or for personal documentation.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Export Steps</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Generate Your Report</h4>
+                                <p>View the report you want to export (Daily, Weekly, or Monthly)</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click Export</h4>
+                                <p>Look for the <strong>"Export"</strong> button, usually at the top-right of the report</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Choose Format</h4>
+                                <p>Select either <strong>PDF</strong> or <strong>Excel (.xlsx)</strong> format</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Download</h4>
+                                <p>The file will automatically download to your device</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>File Naming:</strong> Reports are automatically named with the report type and date (e.g., "Attendance_Report_Jan_2024.pdf")
+                    </div>
+                </section>
+
+                <!-- Communication Section -->
+                <section id="communication" class="content-section">
+                    <h2><i class="bi bi-chat-dots"></i> Direct Communication with Management</h2>
+                    <p>Techsup Track includes a built-in messaging system for seamless communication between you and your management.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Why Use Messaging?</h4>
+                    <ul class="feature-list">
+                        <li>Submit questions or concerns to your manager</li>
+                        <li>Receive important announcements and task assignments</li>
+                        <li>Request time off or leave approvals</li>
+                        <li>Share documents or reports for review</li>
+                        <li>Get immediate responses without leaving the platform</li>
+                        <li>Maintain a complete record of all communications</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">How to Send a Message</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Navigate to Messages</h4>
+                                <p>Click the <strong>"Messages"</strong> tab in your dashboard</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Start New Conversation</h4>
+                                <p>Click <strong>"New Message"</strong> or select a recipient from your contacts</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Type Your Message</h4>
+                                <p>Write your message in the text field. You can format text with bold, italic, and other options.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Send</h4>
+                                <p>Click <strong>"Send"</strong> to deliver your message instantly</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-clock"></i> <strong>Response Times:</strong> Managers typically respond within 24 business hours. For urgent matters, contact your manager directly by phone.
+                    </div>
+                </section>
+
+                <!-- File Sharing -->
+                <section id="file-sharing" class="content-section">
+                    <h2><i class="bi bi-file-earmark-arrow-up"></i> File Sharing & Uploads</h2>
+                    <p>Upload documents, files, and supporting materials directly within your messages.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Supported File Types</h4>
+                    <div class="highlight-box">
+                        PDF, Word (.docx), Excel (.xlsx), Images (.jpg, .png, .gif), and other common document formats up to 10MB per file
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Upload Steps</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Open Message Compose</h4>
+                                <p>Click in the message field or create a new message</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Click Attachment Icon</h4>
+                                <p>Look for the paperclip or attachment icon next to the send button</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Select File</h4>
+                                <p>Browse your device and choose the file you want to upload</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Confirm Upload</h4>
+                                <p>The file will preview before sending. Click send to attach it to your message</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notifications -->
+                <section id="notifications" class="content-section">
+                    <h2><i class="bi bi-bell"></i> Managing Notifications</h2>
+                    <p>Stay informed with timely notifications about messages, announcements, and important system alerts.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Types of Notifications</h4>
+                    <div class="highlight-box">
+                        <strong>Message Notifications:</strong> When you receive a new message from your manager or team
+                    </div>
+                    <div class="highlight-box">
+                        <strong>System Alerts:</strong> Important updates about your account, check-in/check-out reminders, or policy changes
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Report Updates:</strong> When your weekly or monthly reports are ready
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Approval Status:</strong> Notifications when your leave requests or other approvals are processed
+                    </div>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Notification Settings</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Go to Settings</h4>
+                                <p>Click your profile icon and select <strong>"Settings"</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Find Notifications</h4>
+                                <p>Look for the <strong>"Notifications"</strong> section</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Customize Preferences</h4>
+                                <p>Toggle different notification types on or off. You can choose email, SMS, or in-app notifications.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Save Changes</h4>
+                                <p>Click <strong>"Save"</strong> to apply your notification preferences</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mobile App Section -->
+                <section id="mobile-app" class="content-section">
+                    <h2><i class="bi bi-phone"></i> Techsup Track Mobile App</h2>
+                    <p>Access Techsup Track on the go with our dedicated mobile app available for Android and iOS devices.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Download the App</h4>
+                    <div class="row g-3" style="margin-top: 1rem;">
+                        <div class="col-md-6">
+                            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+                                <i class="bi bi-google-play" style="font-size: 2rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                                <h5 style="color: var(--primary); font-weight: 600;">Google Play</h5>
+                                <p>For Android devices</p>
+                                <a href="#" class="btn btn-sm" style="background-color: var(--secondary); color: white; border: none;">Download App</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+                                <i class="bi bi-apple" style="font-size: 2rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                                <h5 style="color: var(--primary); font-weight: 600;">App Store</h5>
+                                <p>For iOS devices</p>
+                                <a href="#" class="btn btn-sm" style="background-color: var(--secondary); color: white; border: none;">Download App</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mobile Features -->
+                <section id="mobile-features" class="content-section">
+                    <h2 style="margin-top: 3rem;"><i class="bi bi-app-indicator"></i> Mobile App Features</h2>
+                    <p>Everything you need is in the palm of your hand.</p>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 1.5rem;">Key Mobile Features</h4>
+                    <ul class="feature-list">
+                        <li>One-tap check-in and check-out</li>
+                        <li>Real-time working hours counter</li>
+                        <li>View daily and weekly reports instantly</li>
+                        <li>Receive instant notifications</li>
+                        <li>Send and receive messages with management</li>
+                        <li>Upload files on the go</li>
+                        <li>GPS verification for accurate location tracking</li>
+                        <li>Offline mode (basic features available without internet)</li>
+                        <li>Fingerprint authentication for quick login</li>
+                        <li>Battery optimization for extended use</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); font-weight: 600; margin-top: 2rem;">Getting Started with the App</h4>
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Download and Install</h4>
+                                <p>Search "Techsup Track" in Google Play or App Store and tap Install</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Open the App</h4>
+                                <p>Tap the app icon to launch Techsup Track</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Login</h4>
+                                <p>Enter your email and password to access your account</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Enable Permissions</h4>
+                                <p>Allow location, notification, and camera permissions for full functionality</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Start Using</h4>
+                                <p>You're ready! Check in, view reports, and communicate with your manager right from your phone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <i class="bi bi-shield-check"></i> <strong>Security Tip:</strong> Enable biometric authentication (fingerprint) in your app settings for secure and quick access.
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="content-section" style="margin-bottom: 3rem;">
+                    <h2><i class="bi bi-question-circle"></i> Frequently Asked Questions</h2>
+
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What should I do if I forgot my password?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    On the login page, click "Forgot Password" and enter your email. You'll receive a password reset link. Follow the instructions to create a new password.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Can I check in from anywhere?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Check-in requires GPS verification from your designated work location. If you're working remotely, your company must have approved remote work in your contract. Contact your manager to set up remote work locations.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How accurate are the working hour calculations?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Working hours are calculated to the minute. The system automatically deducts breaks and lunch periods. All calculations are verified for compliance with Saudi labor law (minimum 9 hours work + 1-hour break = 10-hour workday standard).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What if I forgot to check out?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Contact your manager immediately. They can manually record your checkout time. Repeated check-out failures may affect your attendance record, so it's important to be diligent.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Can I view reports from previous months?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! You can access reports from any previous month. Just select the date range in your reports section. All historical data is retained for compliance and payroll verification.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is my data secure?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. Techsup Track uses enterprise-grade encryption and is certified by the Saudi Ministry of Human Resources. All your personal and attendance data is protected and never shared with third parties.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    How do I request time off or leave?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Send a message to your manager through the messaging system with your leave request. Include the dates and reason. Your manager will review and approve or deny your request. You'll receive a notification about the decision.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    What should I do if there's an error in my attendance record?
+                                </button>
+                            </h2>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Contact your manager immediately with details about the error. They can review the discrepancy and make manual adjustments if necessary. Keep screenshots as evidence if possible.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Active link highlighting based on scroll position
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

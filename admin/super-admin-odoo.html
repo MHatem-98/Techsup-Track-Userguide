@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imported Companies (Odoo) - Techsup Track Super Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="super-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Super Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="super-admin-company-logs.html"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="super-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->
+            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Companies</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Employees</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-verify-employees.html">Verify Employees</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Managers</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">System Email</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Odoo Integration</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" aria-current="page" href="super-admin-odoo.html">Imported Companies (Odoo)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Global Holidays</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-global-holiday.html">Add Global Holiday</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Project Tasks</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-default-project-tasks.html">Default Project Tasks</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">SUPER ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Imported Companies (Odoo)</h1>
+                    <p class="lead mb-0">View and manage companies imported from your Odoo ERP system directly into Techsup Track.</p>
+                </div>
+
+                <section id="odoo-integration" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-cloud-download text-info fs-4"></i> Managing Odoo Imports</h2>
+                    <p>The Imported Companies (Odoo) page displays all companies that have been synced from your Odoo ERP system into Techsup Track. This integration allows for seamless data flow between the two platforms.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-4">The Imported Companies Table</h4>
+                    <div class="table-card">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Column</th>
+                                    <th>What it shows</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>Company Name</strong></td>
+                                    <td>The company's registered name as it appears in Odoo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>Commercial Register</strong></td>
+                                    <td>The company's commercial registration number</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>Tax Number</strong></td>
+                                    <td>Tax ID or VAT number from the Odoo record</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><strong>Contact Number</strong></td>
+                                    <td>The company's registered phone number</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><strong>Employees Count</strong></td>
+                                    <td>How many employees are linked to this company in Odoo</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><strong>Email</strong></td>
+                                    <td>The company's registered email address</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><strong>Contract Start Date</strong></td>
+                                    <td>When the company's contract begins</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><strong>Contract End Date</strong></td>
+                                    <td>When the company's contract ends (if set)</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><strong>Contract Total</strong></td>
+                                    <td>The total value of the company's contract</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><strong>Payment Status</strong></td>
+                                    <td>Current payment status in the Odoo system</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Key Actions</h4>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-cloud-upload text-info me-1"></i> Import New</h4>
+                                <p class="mb-0">Click <strong>Import New</strong> to sync the latest companies from your Odoo system. This pulls any new or updated companies into Techsup Track.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-file-earmark-arrow-up text-info me-1"></i> Export Not Valid Companies</h4>
+                                <p class="mb-0">Click this button to export a list of companies with validation errors — for example, missing required fields or format issues — so you can review and fix them in Odoo before re-importing.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white border rounded-2 p-3 shadow-sm h-100">
+                                <h4 class="h6 fw-semibold text-dark"><i class="bi bi-trash text-danger me-1"></i> Delete All</h4>
+                                <p class="mb-0">Removes all currently imported companies from Techsup Track. This action cannot be undone — use with caution and only when you intend to clear and re-import the entire Odoo company list.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <strong><i class="bi bi-info-circle me-2"></i> Empty Import State</strong>
+                        <p class="mt-2 mb-0">If no companies have been imported yet, the table shows "No imported companies found." Click <strong>Import New</strong> to bring in your first batch of companies from Odoo.</p>
+                    </div>
+
+                    <div class="alert alert-warning border-start border-4 border-info rounded-2 my-4">
+                        <i class="bi bi-exclamation-triangle me-2"></i> <strong>Warning:</strong> The <strong>Delete All</strong> action is permanent and will remove all imported company records. Always export a backup if you plan to clear and re-sync.
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

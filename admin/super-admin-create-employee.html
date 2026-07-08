@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Employee - Techsup Track Super Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="super-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Super Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="super-admin-company-logs.html"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="super-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->
+            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Overview</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Companies</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Employees</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" aria-current="page" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-verify-employees.html">Verify Employees</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">Managers</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group list-group-flush mb-3">
+                        <div class="list-group-item border-0 bg-transparent fw-bold text-uppercase guide-sidebar-title py-2">System Email</div>
+                        <ul class="list-group list-group-flush border-bottom pb-2">
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">SUPER ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Create New Employee</h1>
+                    <p class="lead mb-0">Add a new employee to a company directly from the Super Admin panel — personal details, employment terms, contract dates, and account security in one form.</p>
+                </div>
+
+                <section id="create-employee" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-person-plus text-info fs-4"></i> Creating a New Employee</h2>
+                    <p>From the sidebar, go to <strong>Employees &rarr; Create New Employee</strong>. Make sure you have the correct company selected under <strong>Select Company</strong> first, since the employee will be created under that company.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-4">Section 1 — Personal Information</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Profile Photo</h4>
+                                <p>Click <strong>Choose File</strong> to upload a profile photo.</p>
+                                <div class="alert alert-warning border-start border-4 border-info rounded-2 my-3">
+                                    <i class="bi bi-exclamation-triangle me-2"></i> The profile photo must not exceed 2MB.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Name &amp; ID Number</h4>
+                                <p>Enter the employee's <strong>First Name*</strong>, <strong>Last Name*</strong>, and <strong>ID Number*</strong> — all three are required.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Email &amp; Contact Number</h4>
+                                <p>Enter the employee's email address and contact/phone number.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">4</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Address</h4>
+                                <p>Enter the employee's residential address.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Section 2 — Employment Information</h4>
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Salary Type &amp; Salary</h4>
+                                <p>Choose the <strong>Salary Type</strong> from the dropdown (e.g. Salaried), then enter the <strong>Salary</strong> amount in SAR.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Hourly Rate</h4>
+                                <p>If the employee is paid hourly rather than salaried, enter their <strong>Hourly Rate</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Education Level</h4>
+                                <p>Select the employee's highest education level from the dropdown.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Section 3 — Contract Information</h4>
+                    <p>Set the <strong>Start Contract</strong> and <strong>End Contract</strong> dates. Leave the end date blank for an open-ended contract.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Section 4 — Security Information</h4>
+                    <p>Set the employee's initial login credentials by entering a <strong>Password*</strong> and repeating it in <strong>Confirm Password*</strong>. Both fields are required and must match.</p>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Section 5 — Settings</h4>
+                    <ul class="list-unstyled my-4">
+                        <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill text-info flex-shrink-0"></i><span><strong>MOL TWC Compliance</strong> — toggle on if this employee's records need to comply with Ministry of Labor / TWC reporting requirements</span></li>
+                        <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill text-info flex-shrink-0"></i><span><strong>Status</strong> — set the employee's initial account status from the dropdown</span></li>
+                        <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill text-info flex-shrink-0"></i><span><strong>Auto Fill Attendance</strong> — toggle on to automatically fill attendance for this employee</span></li>
+                        <li class="d-flex gap-2 py-1"><i class="bi bi-check-circle-fill text-info flex-shrink-0"></i><span><strong>Can Edit Own Shifts</strong> — toggle on to allow this employee to adjust their own shift schedule</span></li>
+                    </ul>
+
+                    <h4 class="h5 fw-semibold text-dark mt-5">Save the Employee</h4>
+                    <p>Once all required fields are complete, click <strong>Save</strong> to create the employee, or <strong>Cancel</strong> to discard the form.</p>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> New employees created this way typically appear as <strong>Pending</strong> and <strong>Unverified</strong> in the Employees List until they're reviewed — check the <em>Verify Employees</em> page to confirm and activate them.
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
