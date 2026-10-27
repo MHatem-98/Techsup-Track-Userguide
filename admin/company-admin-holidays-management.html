@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holidays Management Guide - Techsup Track Company Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="company-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Company Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="company-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-1" aria-expanded="false">
+      Overview
+    </button>
+  </h2>
+  <div id="sidebar-collapse-1" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-2" aria-expanded="false">
+      Companies
+    </button>
+  </h2>
+  <div id="sidebar-collapse-2" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-3" aria-expanded="false">
+      Employees
+    </button>
+  </h2>
+  <div id="sidebar-collapse-3" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-verify-employees.html">Verify Employees</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-4" aria-expanded="false">
+      Managers
+    </button>
+  </h2>
+  <div id="sidebar-collapse-4" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-5" aria-expanded="false">
+      System Email
+    </button>
+  </h2>
+  <div id="sidebar-collapse-5" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-6" aria-expanded="false">
+      Odoo Integration
+    </button>
+  </h2>
+  <div id="sidebar-collapse-6" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-odoo.html">Imported Companies (Odoo)</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-7" aria-expanded="false">
+      Global Holidays
+    </button>
+  </h2>
+  <div id="sidebar-collapse-7" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-global-holiday.html">Add Global Holiday</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-8" aria-expanded="false">
+      Project Tasks
+    </button>
+  </h2>
+  <div id="sidebar-collapse-8" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-default-project-tasks.html">Default Project Tasks</a></li></ul>
+    </div>
+  </div>
+</div>
+                
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-9" aria-expanded="false">
+      Overview
+    </button>
+  </h2>
+  <div id="sidebar-collapse-9" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-home.html">Company Admin Reports</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-10" aria-expanded="false">
+      Reports
+    </button>
+  </h2>
+  <div id="sidebar-collapse-10" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-shifts.html">Reports by Shifts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-hours.html">Reports by Hours</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-tasks.html">Reports by Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-archive.html">Reports Archive</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-11" aria-expanded="false">
+      Employees
+    </button>
+  </h2>
+  <div id="sidebar-collapse-11" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-employees.html">Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-hire.html">Hire</a></li></ul>
+    </div>
+  </div>
+</div>
+           
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-12" aria-expanded="false">
+      Activity Logs
+    </button>
+  </h2>
+  <div id="sidebar-collapse-12" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-logs.html">Activity Logs</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-statistics.html">Activity Statistics</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-13" aria-expanded="false">
+      Projects
+    </button>
+  </h2>
+  <div id="sidebar-collapse-13" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-projects.html">All Projects</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-project.html">Create Project</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-projects.html">Trashed Projects</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-14" aria-expanded="false">
+      Tasks Management
+    </button>
+  </h2>
+  <div id="sidebar-collapse-14" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-tasks.html">Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-task.html">Create Task</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-tasks.html">Trashed Tasks</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-15" aria-expanded="false">
+      Files
+    </button>
+  </h2>
+  <div id="sidebar-collapse-15" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-files.html">Files List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-file.html">Create File</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-files.html">Trashed Files</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-16" aria-expanded="false">
+      Emails
+    </button>
+  </h2>
+  <div id="sidebar-collapse-16" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-emails.html">Emails</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-email.html">Create Email</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-emails.html">Trashed Emails</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-17" aria-expanded="false">
+      Chat
+    </button>
+  </h2>
+  <div id="sidebar-collapse-17" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-chat.html">Chat</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-blocked-users.html">Blocked Users</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-chat-users.html">Chat Users</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-18" aria-expanded="false">
+      Departments
+    </button>
+  </h2>
+  <div id="sidebar-collapse-18" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-departments.html">Departments</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-department.html">Create Department</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-19" aria-expanded="false">
+      Locations
+    </button>
+  </h2>
+  <div id="sidebar-collapse-19" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-locations.html">Locations</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-location.html">Create Location</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-20" aria-expanded="false">
+      Manage Shifts
+    </button>
+  </h2>
+  <div id="sidebar-collapse-20" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-manage-shifts.html">Manage Shifts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-shifts.html">Create Shifts</a></li></ul>
+    </div>
+  </div>
+</div>
+                     <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-21" aria-expanded="true">
+      Holidays
+    </button>
+  </h2>
+  <div id="sidebar-collapse-21" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" href="company-admin-holidays-management.html" aria-current="page">Holidays Management</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-add-holiday.html">Add New Holiday</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-planned-holidays.html">Planned Holidays Management</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-planned-holiday.html">Add New Planned Holiday</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-22" aria-expanded="false">
+      Managers
+    </button>
+  </h2>
+  <div id="sidebar-collapse-22" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-managers.html">Managers List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-manager.html">Create New Managers</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-23" aria-expanded="false">
+      Admins
+    </button>
+  </h2>
+  <div id="sidebar-collapse-23" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-admins.html">Admins</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-add-admin.html">Add New Admin</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-admin-assignment.html">Admin Assignment</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-24" aria-expanded="false">
+      Company Contracts
+    </button>
+  </h2>
+  <div id="sidebar-collapse-24" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-company-contracts.html">Company Contracts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-contract.html">Create Contract</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-subscription.html">Create Subscription</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-25" aria-expanded="false">
+      Portal
+    </button>
+  </h2>
+  <div id="sidebar-collapse-25" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-portal-folders.html">Portal Folders</a></li></ul>
+    </div>
+  </div>
+</div>
+                </div>
+                
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">COMPANY ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Holidays Management</h1>
+                    <p class="lead mb-0">Manage employee holidays, vacation days, and time-off requests</p>
+                </div>
+
+                <section id="overview" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-calendar-event text-info fs-4"></i> Overview</h2>
+                    <p>The Holidays Management page is your central hub for managing all employee time-off requests including vacation days, sick leave, personal days, and other holiday types. You can view holiday statistics, search for specific holidays, filter by various criteria, and create new holiday records.</p>
+                </section>
+
+                <section id="statistics" class="guide-section mb-5">
+                    <h2 class="fw-bold">Understanding Holiday Statistics</h2>
+                    <p>The top of the page displays four key statistics:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Total Holidays</h4>
+                                <p>Complete count of all holiday records in your system, including past, present, and future holidays.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Public Holidays</h4>
+                                <p>Shows the number of public holidays that apply to all employees. These are typically national or regional holidays when the whole company is closed.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Private Holidays</h4>
+                                <p>Displays the count of private/personal holidays — time off specific to individual employees for personal reasons.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">4</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Annual Holidays</h4>
+                                <p>Shows the count of annual vacation days that employees take as part of their yearly entitlements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="search-filter" class="guide-section mb-5">
+                    <h2 class="fw-bold">Search and Filter Options</h2>
+                    <p>Use these tools to find specific holidays:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Search Box</h4>
+                                <p>Enter a holiday name, employee name, or other keywords to quickly locate specific holiday records.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Type Filter</h4>
+                                <p>Filter holidays by type: All Types, Public, Private, Annual, Sick Leave, Personal Days, etc.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Status Filter</h4>
+                                <p>Filter by status: All, Approved, Pending, Rejected, or Cancelled.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">4</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Date Range Filter</h4>
+                                <p>Select From Date and To Date to filter holidays within a specific time period.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">5</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Filter & Reset Buttons</h4>
+                                <p>Click <strong>Filter</strong> to apply your criteria. Click <strong>Reset</strong> to clear all filters and see all holidays.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="holidays-list" class="guide-section mb-5">
+                    <h2 class="fw-bold">Holidays List Table</h2>
+                    <p>The holidays list displays records with the following columns:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Holiday Name</h4>
+                                <p>The name or title of the holiday (e.g., "Summer Vacation", "Sick Leave", "Public Holiday").</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Type</h4>
+                                <p>The category of holiday (Public, Private, Annual, Sick, etc.).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Employee</h4>
+                                <p>The name of the employee assigned to this holiday (if applicable).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Status</h4>
+                                <p>Current status of the holiday request (Approved, Pending, Rejected, etc.).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Start Date & End Date</h4>
+                                <p>The date range for the holiday period.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Duration</h4>
+                                <p>The number of days included in this holiday period.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Actions</h4>
+                                <p>Options to view details, edit, approve/reject, or delete the holiday record.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="add-holiday" class="guide-section mb-5">
+                    <h2 class="fw-bold">Creating a New Holiday</h2>
+                    <p>To add a new holiday to the system:</p>
+                    <ol class="list-unstyled my-4">
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">1</span><span>Click the <strong>+ Add New Holiday</strong> button in the top-right corner.</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">2</span><span>Select the holiday type (Public, Private, Annual, Sick Leave, etc.).</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">3</span><span>Fill in the holiday details (name, dates, employee assignment, reason).</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">4</span><span>Click <strong>Save</strong> to create the holiday record.</span></li>
+                    </ol>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> For detailed instructions on adding new holidays, refer to the "Add New Holiday" guide page.
+                    </div>
+                </section>
+
+                <section id="best-practices" class="guide-section mb-5">
+                    <h2 class="fw-bold">Best Practices for Holiday Management</h2>
+                    <ul class="list-unstyled">
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Plan Ahead:</strong> Create holiday records in advance so employees know what time off is available.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Approve Timely:</strong> Review and approve or reject holiday requests promptly to avoid confusion.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Maintain Records:</strong> Keep accurate records of all holidays for payroll and compliance purposes.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Track Balances:</strong> Monitor individual employee holiday balances to ensure fair distribution.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Use Descriptions:</strong> Add notes or reasons when creating holiday records for future reference.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                    <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> Use the search and filter options frequently to quickly find specific holidays or track holidays by employee, type, or time period.
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

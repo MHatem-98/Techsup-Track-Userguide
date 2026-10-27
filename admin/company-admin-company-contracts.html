@@ -1,0 +1,614 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Contracts Guide - Techsup Track Company Admin Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top guide-topbar py-0">
+        <div class="container-fluid px-4">
+           <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="company-admin-home.html">
+                <img src="../assets/images/logo-white.png" alt="Logo"  width="120px">
+            </a>
+            <span class="badge rounded-pill border border-light-subtle text-white d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-book"></i> Company Admin Guide
+            </span>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-headset me-1"></i>Support</a></li>
+                    <li class="nav-item"><a class="btn btn-info btn-sm fw-semibold px-3" href="company-admin-home.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="guide-shell">
+        <div class="guide-content">
+            <!-- Sidebar Navigation -->            <aside class="guide-sidebar py-4">
+                <div class="px-3">
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-1" aria-expanded="false">
+      Overview
+    </button>
+  </h2>
+  <div id="sidebar-collapse-1" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-home.html">Home Dashboard</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-admins-reports.html">Admins Reports</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-2" aria-expanded="false">
+      Companies
+    </button>
+  </h2>
+  <div id="sidebar-collapse-2" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-companies.html">Companies List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-company.html">Create New Company</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-archive-companies.html">Archive Companies</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-company-logs.html">Company Logs</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-3" aria-expanded="false">
+      Employees
+    </button>
+  </h2>
+  <div id="sidebar-collapse-3" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-employee.html">Create New Employee</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-trashed-employees.html">Trashed Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-verify-employees.html">Verify Employees</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-4" aria-expanded="false">
+      Managers
+    </button>
+  </h2>
+  <div id="sidebar-collapse-4" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-managers.html">Managers List</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-5" aria-expanded="false">
+      System Email
+    </button>
+  </h2>
+  <div id="sidebar-collapse-5" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-create-email.html">Create Email</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-6" aria-expanded="false">
+      Odoo Integration
+    </button>
+  </h2>
+  <div id="sidebar-collapse-6" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-odoo.html">Imported Companies (Odoo)</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-7" aria-expanded="false">
+      Global Holidays
+    </button>
+  </h2>
+  <div id="sidebar-collapse-7" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-global-holiday.html">Add Global Holiday</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-8" aria-expanded="false">
+      Project Tasks
+    </button>
+  </h2>
+  <div id="sidebar-collapse-8" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="super-admin-default-project-tasks.html">Default Project Tasks</a></li></ul>
+    </div>
+  </div>
+</div>
+                
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-9" aria-expanded="false">
+      Overview
+    </button>
+  </h2>
+  <div id="sidebar-collapse-9" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-home.html">Company Admin Reports</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-10" aria-expanded="false">
+      Reports
+    </button>
+  </h2>
+  <div id="sidebar-collapse-10" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-shifts.html">Reports by Shifts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-hours.html">Reports by Hours</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-tasks.html">Reports by Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-reports-archive.html">Reports Archive</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-11" aria-expanded="false">
+      Employees
+    </button>
+  </h2>
+  <div id="sidebar-collapse-11" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-employees.html">Employees</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-hire.html">Hire</a></li></ul>
+    </div>
+  </div>
+</div>
+           
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-12" aria-expanded="false">
+      Activity Logs
+    </button>
+  </h2>
+  <div id="sidebar-collapse-12" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-logs.html">Activity Logs</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-activity-statistics.html">Activity Statistics</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-13" aria-expanded="false">
+      Projects
+    </button>
+  </h2>
+  <div id="sidebar-collapse-13" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-projects.html">All Projects</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-project.html">Create Project</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-projects.html">Trashed Projects</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-14" aria-expanded="false">
+      Tasks Management
+    </button>
+  </h2>
+  <div id="sidebar-collapse-14" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-tasks.html">Tasks</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-task.html">Create Task</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-tasks.html">Trashed Tasks</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-15" aria-expanded="false">
+      Files
+    </button>
+  </h2>
+  <div id="sidebar-collapse-15" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-files.html">Files List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-file.html">Create File</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-files.html">Trashed Files</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-16" aria-expanded="false">
+      Emails
+    </button>
+  </h2>
+  <div id="sidebar-collapse-16" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-emails.html">Emails</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-email.html">Create Email</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-trashed-emails.html">Trashed Emails</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-17" aria-expanded="false">
+      Chat
+    </button>
+  </h2>
+  <div id="sidebar-collapse-17" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-chat.html">Chat</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-blocked-users.html">Blocked Users</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-chat-users.html">Chat Users</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-18" aria-expanded="false">
+      Departments
+    </button>
+  </h2>
+  <div id="sidebar-collapse-18" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-departments.html">Departments</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-department.html">Create Department</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-19" aria-expanded="false">
+      Locations
+    </button>
+  </h2>
+  <div id="sidebar-collapse-19" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-locations.html">Locations</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-location.html">Create Location</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-20" aria-expanded="false">
+      Manage Shifts
+    </button>
+  </h2>
+  <div id="sidebar-collapse-20" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-manage-shifts.html">Manage Shifts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-shifts.html">Create Shifts</a></li></ul>
+    </div>
+  </div>
+</div>
+                     <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-21" aria-expanded="false">
+      Holidays
+    </button>
+  </h2>
+  <div id="sidebar-collapse-21" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-holidays-management.html">Holidays Management</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-add-holiday.html">Add New Holiday</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-planned-holidays.html">Planned Holidays Management</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-planned-holiday.html">Add New Planned Holiday</a></li></ul>
+    </div>
+  </div>
+</div>
+
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-22" aria-expanded="false">
+      Managers
+    </button>
+  </h2>
+  <div id="sidebar-collapse-22" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-managers.html">Managers List</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-manager.html">Create New Managers</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-23" aria-expanded="false">
+      Admins
+    </button>
+  </h2>
+  <div id="sidebar-collapse-23" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-admins.html">Admins</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-add-admin.html">Add New Admin</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-admin-assignment.html">Admin Assignment</a></li></ul>
+    </div>
+  </div>
+</div>
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-24" aria-expanded="true">
+      Company Contracts
+    </button>
+  </h2>
+  <div id="sidebar-collapse-24" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2 active" href="company-admin-company-contracts.html" aria-current="page">Company Contracts</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-contract.html">Create Contract</a></li>
+                            <li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-create-subscription.html">Create Subscription</a></li></ul>
+    </div>
+  </div>
+</div>
+ 
+                    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse-25" aria-expanded="false">
+      Portal
+    </button>
+  </h2>
+  <div id="sidebar-collapse-25" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul class="list-group list-group-flush border-bottom pb-2"><li class="list-group-item p-0"><a class="list-group-item list-group-item-action border-0 small py-2" href="company-admin-portal-folders.html">Portal Folders</a></li></ul>
+    </div>
+  </div>
+</div>
+                </div>
+                
+            </aside>
+
+            <!-- Main Content -->
+            <main class="guide-main px-3 px-lg-5 py-4 py-lg-5">
+                <div class="guide-hero text-white p-4 p-lg-5 mb-5">
+                    <span class="badge rounded-pill guide-pill px-3 py-2 mb-3 text-uppercase fw-bold">COMPANY ADMIN GUIDE</span>
+                    <h1 class="display-6 fw-bold mb-3">Company Contracts</h1>
+                    <p class="lead mb-0">Manage and track all company contracts and agreements</p>
+                </div>
+
+                <section id="overview" class="guide-section mb-5">
+                    <h2 class="fw-bold d-flex align-items-center gap-2"><i class="bi bi-file-earmark-text text-info fs-4"></i> Overview</h2>
+                    <p>The Company Contracts page is a comprehensive repository for managing all contracts and agreements entered into by your company. From client contracts to vendor agreements, this centralized system helps you track contract status, expiry dates, values, and important terms and conditions.</p>
+                </section>
+
+                <section id="statistics" class="guide-section mb-5">
+                    <h2 class="fw-bold">Understanding Contract Statistics</h2>
+                    <p>The top of the page displays four key metrics about your contracts:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Total Contracts</h4>
+                                <p>Shows the complete count of all contracts in your system, including active, expiring, and expired contracts.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Active Contracts</h4>
+                                <p>Displays the number of contracts that are currently active and in effect (not expired).</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Expiring Soon</h4>
+                                <p>Shows contracts approaching their expiration dates (typically within 30-90 days). These require attention and potential renewal.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">4</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Expired Contracts</h4>
+                                <p>Displays contracts that have passed their expiration dates and are no longer active.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="search-filter" class="guide-section mb-5">
+                    <h2 class="fw-bold">Search and Filter Options</h2>
+                    <p>Use these tools to find specific contracts:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">1</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Search Box</h4>
+                                <p>Enter a contract title, company name, or description to quickly locate specific contracts.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">2</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Status Filter</h4>
+                                <p>Filter contracts by status: All Statuses, Active, or Expired.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">3</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Date Range Filter</h4>
+                                <p>Filter contracts by Start Date and End Date to view contracts within a specific time period.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">4</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Apply Filter & Reset</h4>
+                                <p>Click <strong>Apply Filters</strong> to execute your search. Click <strong>Clear Filters</strong> to reset and view all contracts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contracts-table" class="guide-section mb-5">
+                    <h2 class="fw-bold">Contracts Table</h2>
+                    <p>The contracts list displays all contracts with the following columns:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Company</h4>
+                                <p>The name of the company that is party to the contract.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Contract Title</h4>
+                                <p>The name or title of the contract (e.g., "Software Development Agreement", "Service Level Agreement").</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Contract Value</h4>
+                                <p>The monetary value of the contract in the company currency.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Start Date</h4>
+                                <p>The date when the contract becomes effective.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">End Date</h4>
+                                <p>The date when the contract expires or terminates.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Status</h4>
+                                <p>Current status of the contract: Active, Expiring Soon, or Expired.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">•</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Actions</h4>
+                                <p>Dropdown menu with options to view, edit, or delete the contract.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="managing-contracts" class="guide-section mb-5">
+                    <h2 class="fw-bold">Managing Contracts</h2>
+                    <p>From the contracts list, you can perform several actions on each contract:</p>
+
+                    <div class="vstack gap-3 mt-4">
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">✎</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">View Contract Details</h4>
+                                <p>Click on a contract row to view its complete details including terms and conditions.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">✎</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Edit Contract</h4>
+                                <p>Modify contract information such as dates, values, or terms. Click the Actions button and select Edit.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row gap-3 bg-white border rounded-2 p-3 shadow-sm">
+                            <div class="badge rounded-pill text-bg-info align-self-start fs-6 px-3 py-2">🗑</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 fw-semibold text-dark">Delete Contract</h4>
+                                <p>Remove a contract from the system. Use caution as this action may be irreversible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="create-contract" class="guide-section mb-5">
+                    <h2 class="fw-bold">Creating a New Contract</h2>
+                    <p>To add a new contract to your system:</p>
+                    <ol class="list-unstyled my-4">
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">1</span><span>Click the <strong>+ New Contract</strong> button in the top-right corner.</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">2</span><span>Fill in the contract details (company, title, value, dates).</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">3</span><span>Add terms and conditions or attach contract documents.</span></li>
+                        <li class="d-flex gap-2 py-2"><span class="badge rounded-pill text-bg-info fs-6 px-2 py-1">4</span><span>Click <strong>Save Contract</strong> to create the record.</span></li>
+                    </ol>
+
+                    <div class="alert alert-info border-start border-4 border-info rounded-2">
+                        <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> For detailed instructions on creating new contracts, refer to the "Create Contract" guide page.
+                    </div>
+                </section>
+
+                <section id="best-practices" class="guide-section mb-5">
+                    <h2 class="fw-bold">Best Practices for Contract Management</h2>
+                    <ul class="list-unstyled">
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Regular Review:</strong> Periodically review contracts, especially those expiring soon, to plan renewals.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Accurate Dates:</strong> Ensure start and end dates are accurate to prevent missed renewal deadlines.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Document Storage:</strong> Keep all contract documents and attachments organized and accessible.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3 border-bottom">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Clear Titles:</strong> Use descriptive contract titles for easy identification and searching.</span>
+                        </li>
+                        <li class="d-flex gap-2 py-3">
+                            <i class="bi bi-check-circle-fill text-info"></i>
+                            <span><strong>Renewal Tracking:</strong> Monitor contracts approaching expiration and plan renewals in advance.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="alert alert-info border-start border-4 border-info rounded-2 my-4">
+                    <i class="bi bi-lightbulb me-2"></i> <strong>Tip:</strong> Check the "Expiring Soon" metric regularly to ensure no critical contracts lapse without renewal. Set calendar reminders for important contract renewal dates.
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
